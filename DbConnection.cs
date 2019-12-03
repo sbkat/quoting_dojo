@@ -50,7 +50,7 @@ namespace quoting_dojo
                 {
                     command.CommandText = queryString;
                     dbConnection.Open();
-                    // command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
                 }
             }
         }

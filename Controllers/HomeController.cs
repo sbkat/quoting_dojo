@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using quoting_dojo.Models;
-using quoting_dojo;
 
 namespace quoting_dojo.Controllers
 {
@@ -23,7 +22,7 @@ namespace quoting_dojo.Controllers
         {
             if(ModelState.IsValid)
             {
-                string query = $"INSERT INTO users (name, quote) VALUES ('{newUser.name}', '{newUser.quote}'"; 
+                string query = $"INSERT INTO users (name, quote) VALUES ('{newUser.name}', '{newUser.quote}')"; 
                 DbConnector.Execute(query);
                 return RedirectToAction("quotes");
             }
