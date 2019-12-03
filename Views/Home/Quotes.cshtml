@@ -1,0 +1,10 @@
+@model List<Dictionary<string, object>>
+
+<h1 class="display-4">Here are the awesome quotes!</h1>
+@foreach(var User in Model)
+{
+    <p class="lead">@User["quote"]</p>
+    <p class="lead">- @User["name"] at @User["created_at"]</p>
+    <hr>
+}
+

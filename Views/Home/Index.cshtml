@@ -1,0 +1,19 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "Quoting Dojo";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to QuotingDojo</h1>
+    <form asp-action="SubmitQuote" asp-controller="home">
+        <span asp-validation-for="name"></span>
+        <label asp-for="name"></label>
+        <input asp-for="name"><br>
+        <span asp-validation-for="quote"></span>
+        <label asp-for="quote"></label>
+        <input asp-for="quote"><br>
+        <button>Add my quote!</button>
+    </form>
+        <a href="quotes">Skip to quotes!</a>
+</div>
